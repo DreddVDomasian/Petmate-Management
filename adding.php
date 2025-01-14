@@ -52,7 +52,7 @@
     <div class="forms">
         <div class="inside">
             <div>
-                <p class="header">DETAILS</p>
+                <p class="header">DETAILSSSS</p>
             </div>
             <div class="details">
                 <form method="POST" action="adding.php">
