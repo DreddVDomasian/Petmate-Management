@@ -1,0 +1,68 @@
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top,#0d2633,#3e5dc0);
+}
+.nav{
+    display: flex;
+     width: 1824px;
+     height: 100px;
+     border-radius: 70px;
+     background-color: #E4EFFF;
+     justify-content: space-between;
+     box-shadow: 0 15px 14px rgba(0, 0, 0, 0.493);
+     margin-bottom: 35px;
+}
+.petmate{
+    display: flex;
+    align-items: center;
+}
+.logo{
+    width: 250px;
+    height: 90px;
+
+}
+.bell{
+    height: 44px;
+    margin-right: 40px;
+}
+.notif{
+    display: flex;
+    align-items: center;
+}
+
+.btns{
+    display: flex;
+    width: 1600px;
+    height: 742px;
+    background: linear-gradient(to bottom, #50b6e9,#0d2633);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 50px;
+    box-shadow: 8px 12px 16px rgba(0, 0, 0, 0.527);
+
+}
+.add,.view{
+    width: 500px;
+    height: 190px;
+    background: linear-gradient(to bottom, #fab669,#916432);
+    border: none;
+    border-radius: 25px;
+    transition: background 0.3s ease, color 0.2s ease;
+    font-size: 42px;
+    font-family: "Rubik Spray Paint", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    box-shadow: 8px 12px 16px rgba(0, 0, 0, 0.527);;
+}
+
+.add:hover,.view:hover{
+    background: linear-gradient(to bottom, #eb9a3e,#744b1c);
+    color: rgb(163, 163, 163);
+}

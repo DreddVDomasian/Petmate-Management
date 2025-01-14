@@ -1,0 +1,48 @@
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top,#0d2633,#3e5dc0);
+}
+
+.nav{
+    display: flex;
+     width: 1824px;
+     height: 100px;
+     border-radius: 70px;
+     background-color: #E4EFFF;
+     justify-content: space-between;
+     box-shadow: 0 15px 14px rgba(0, 0, 0, 0.493);
+     margin-bottom: 35px;
+}
+.back{
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+}
+
+.arrow{
+    height: 50px;
+}
+
+
+.petmate{
+    display: flex;
+    align-items: center;
+}
+.logo{
+    width: 250px;
+    height: 90px;
+
+}
+.bell{
+    height: 44px;
+}
+.notif{
+    display: flex;
+    align-items: center;
+    padding-right: 40px;
+}
