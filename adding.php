@@ -41,7 +41,7 @@
 <body>
     <div class="nav">
 
-        <div class="back"><img class="arrow" src="back.png" alt="back" onclick="window.location.href='homepage.html'"></div>
+        <div class="back"><img class="arrow" src="back.png" alt="back" onclick="window.location.href='index.html'"></div>
 
         <div class="petmate"><img class="logo" src="LOGO.png" alt="logo"></div>
 
