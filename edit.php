@@ -67,8 +67,8 @@ else {
                             <input type="text" name="ownerName" id="ownerName" value="<?php echo htmlspecialchars($row['ownerName']); ?>" required>
                             <input type="text" name="petName" id="petName" value="<?php echo htmlspecialchars($row['petName']); ?>" required>
                             <input type="text" name="species" id="species" value="<?php echo htmlspecialchars($row['species']); ?>" required>
-                            <input type="text" name="phoneNumber" id="phoneNumber" value="<?php echo htmlspecialchars($row['phoneNumber']); ?>" required>
                             <input type="text" name="breed" id="breed" value="<?php echo htmlspecialchars($row['breed']); ?>" required>
+                            <input type="text" name="phoneNumber" id="phoneNumber" value="<?php echo htmlspecialchars($row['phoneNumber']); ?>" required>
                         </div>
                     </div>
                     <div class="submit">
