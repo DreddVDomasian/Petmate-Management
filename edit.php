@@ -42,7 +42,7 @@ else {
 
         <div class="petmate"><img class="logo" src="LOGO.png" alt="logo"></div>
 
-        <div class="notif"><img class="bell" src="bell.png" alt="notif"></div>
+        <div class="notif"></div>
 
     </div>
 
