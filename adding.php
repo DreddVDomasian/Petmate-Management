@@ -35,6 +35,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Spray+Paint&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="adding.css">
+    <link rel="stylesheet" href="responsive.css">
     <title>Add Pet</title>
 </head>
 <body>

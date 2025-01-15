@@ -16,7 +16,8 @@ if (isset($_POST['id'])) {
     } else {
         die("Record not found.");
     }
-} else {
+} 
+else {
     die("ID is required.");
 }
 ?>
@@ -31,6 +32,7 @@ if (isset($_POST['id'])) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Spray+Paint&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="adding.css">
+    <link rel="stylesheet" href="responsive.css">
     <title>Edit Pet</title>
 </head>
 <body>

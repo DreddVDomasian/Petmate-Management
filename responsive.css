@@ -1,0 +1,84 @@
+ @media screen and (min-width: 769px) and (max-width: 1024px) {
+    .forms{
+        scale: 0.7;
+    }
+
+    .nav{
+        width: 750px;
+        height: 75px;
+    }
+    .nav img{
+        scale: 0.8;
+    }
+    .btns{
+        scale: 0.4;
+    }
+
+    .container{
+        width: 750px;
+    }
+    .container .header{
+        width: 730px;
+
+    }
+    .header div{
+        font-size: 32px;
+    }
+    .innerContainer{
+        width: 730px;
+    }
+    .thead{
+        width: 720px;
+    }
+    .details div p{
+        font-size: 15px;
+    }
+    .records{
+        width: 720px;
+        min-height: 75px;
+    }
+    .editbtn,.removebtn{
+        scale: 0.6;
+    }
+  }
+  
+  @media screen and (min-width: 900px) and (max-width: 1440px) {
+    .nav{
+        width: 900px;
+        height: 90px;
+    }
+    .btns{
+        scale: 0.6;
+    }
+    .container{
+        width: 900px;
+        height: 620px;
+    }
+
+
+    .container .header{
+        width: 880px;
+
+    }
+    .header div{
+        font-size: 38px;
+    }
+    .innerContainer{
+        width: 880px;
+        max-height: 460px;
+        min-height: 460px;
+    }
+    .thead{
+        width: 870px;
+    }
+    .details div p{
+        font-size: 15px;
+    }
+    .records{
+        width: 870px;
+        min-height: 75px;
+    }
+    .editbtn,.removebtn{
+        scale: 0.7;
+    }
+  }
