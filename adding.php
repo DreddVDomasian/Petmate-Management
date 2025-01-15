@@ -75,12 +75,10 @@
                     </div>
                     <div class="submit">
                         <input type="submit" value="SUBMIT">
-                    </div>
-                   
+                    </div>  
                 </form>
             </div>
         </div>
-        
     </div>
 </body>
 </html>

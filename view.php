@@ -39,6 +39,36 @@
             <div><p>PATIENT RECORDS</p></div>
         </div>
         <div class="innerContainer">
+            <div class="thead">
+                <div class="details">
+                    <div class="ownerName">
+                        <p>OWNER’S NAME</p>
+                    </div>
+
+                    <div class="petName">
+                        <p>PET’S NAME</p>
+                    </div>
+
+                    <div class="species">
+                        <p>SPECIES</p>
+                    </div>
+
+                    <div class="breed">
+                        <p>BREED</p>
+                    </div>
+
+                    <div class="number">
+                        <p>CELL NO.</p>
+                    </div>
+                    <div class="editbtnfiller">
+                        <button>Edit</button>
+                    </div>
+                    <div class="editbtnfiller">
+                        <button>Edit</button>
+                    </div>
+                </div>
+            </div>
+            
             <?php
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
@@ -66,17 +96,24 @@
                             </div>
 
                             <div class="editbtn">
-                                <button>Edit</button>
+                                <form method="POST" action="edit.php">
+                                    <!-- Correct way to embed PHP inside a form -->
+                                    <input type="hidden" name="id" value="' . htmlspecialchars($row['id']) . '">
+                                    <button type="submit">Edit</button>
+                                </form>
                             </div>
 
                             <div class="removebtn">
-                                <button>REMOVE</button>
+                                <form method="POST" action="remove.php" onsubmit="return confirm(\'Are you sure you want to remove this record?\');">
+                                    <input type="hidden" name="id" value="' . htmlspecialchars($row['id']) . '">
+                                    <button type="submit">REMOVE</button>
+                                </form>
                             </div>
                         </div>
                     </div>';
                 }
             } else {
-                echo '<p style="color: white; font-size: 20px;">No records found.</p>';
+                echo '<p class="noRecords">No records found.</p>';
             }
             ?>
         </div>

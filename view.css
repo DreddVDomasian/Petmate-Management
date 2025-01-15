@@ -61,7 +61,7 @@ body{
     justify-content: center;
     width: 1713px;
     height: 112px;
-    background: linear-gradient(to bottom,#3F99C6,#163a4d);
+    background: linear-gradient(to bottom,#009ceb,#163a4d);
     border-radius: 20px;
     margin-top: 17px;
 }
@@ -82,8 +82,31 @@ body{
     flex-direction: column;
     align-items: center;
     overflow-y: auto; 
-    padding-right: 5px;
+    box-shadow: inset 0px -16px 14px rgba(0, 0, 0, 0.5);;
 }
+
+.editbtnfiller button{
+    width: 146px;
+    height: 60px;
+    display: none;
+}
+.thead{
+    width: 1676px;
+    min-height: 60px;
+    border-radius: 20px;
+    background: linear-gradient(to bottom,#f3a54c,#945d1f);
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky; 
+    top: 14px; 
+    z-index: 10; /* Ensures it stays above other content */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+
+}
+
+
 .records{
     width: 1676px;
     min-height: 159px;
@@ -142,3 +165,23 @@ body{
     background: linear-gradient(to bottom,#FF7373,#940101);
     border: none;
 }
+.noRecords{
+    font-family: "Rubik Spray Paint", serif;
+    color: white;
+    font-size: 35px;
+    align-items: center;
+    text-align: center;
+}
+::-webkit-scrollbar {
+    width: 12px; /* width of the scrollbar */
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f100; 
+    border-radius: 10px;
+
+}
+::-webkit-scrollbar-thumb {
+    background: #f3a54c; /* thumb color */
+    border-radius: 10px;
+}
+
