@@ -98,7 +98,6 @@
 
                             <div class="editbtn">
                                 <form method="POST" action="edit.php">
-                                    <!-- Correct way to embed PHP inside a form -->
                                     <input type="hidden" name="id" value="' . htmlspecialchars($row['id']) . '">
                                     <button type="submit">Edit</button>
                                 </form>
