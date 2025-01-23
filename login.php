@@ -6,7 +6,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    // Query to check if the username and password match
     $sql = "SELECT * FROM users WHERE username = ? AND password = ?";
     $stmt = $con->prepare($sql);
     $stmt->bind_param("ss", $username, $password);
@@ -14,14 +13,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
-        // Set a session for the logged-in user
+
         $_SESSION['username'] = $username;
 
-        // Redirect to homepage
         header("Location: index.php");
         exit();
     } else {
-        // Invalid credentials message
         $error = "Invalid username or password.";
     }
 }
