@@ -1,6 +1,6 @@
 <?php
+    session_start();
     include("dbconnect.php");
-
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $Ownername = $_POST['Ownername'];
         $PetName = $_POST['PetName'];
@@ -41,7 +41,7 @@
 <body>
     <div class="nav">
 
-        <div class="back"><img class="arrow" src="back.png" alt="back" onclick="window.location.href='index.html'"></div>
+        <div class="back"><img class="arrow" src="back.png" alt="back" onclick="window.location.href='index.php'"></div>
 
         <div class="petmate"><img class="logo" src="LOGO.png" alt="logo"></div>
 

@@ -1,27 +1,32 @@
 <?php
-    include("dbconnect.php");
-    session_start(); 
+include("dbconnect.php");
+session_start();
 
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $username = $_POST['username'];
-        $password = $_POST['password'];
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
-        
-        $query = "SELECT * FROM users WHERE username = ? AND password = ?";
-        $stmt = $conn->prepare($query);
-        $stmt->bind_param("ss", $username, $password);
-        $stmt->execute();
-        $result = $stmt->get_result();
+    // Query to check if the username and password match
+    $sql = "SELECT * FROM users WHERE username = ? AND password = ?";
+    $stmt = $con->prepare($sql);
+    $stmt->bind_param("ss", $username, $password);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-        if ($result->num_rows === 1) {
-            $_SESSION['username'] = $username; 
-            header("Location: dashboard.php");
-            exit();
-        } else {
-            echo "Invalid username or password";
-        }
+    if ($result->num_rows > 0) {
+        // Set a session for the logged-in user
+        $_SESSION['username'] = $username;
+
+        // Redirect to homepage
+        header("Location: index.php");
+        exit();
+    } else {
+        // Invalid credentials message
+        $error = "Invalid username or password.";
     }
+}
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
