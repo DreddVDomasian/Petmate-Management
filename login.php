@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    // Prepare the SQL statement to prevent SQL injection
+
     $sql = "SELECT * FROM users WHERE username = ?";
     $stmt = $con->prepare($sql);
     $stmt->bind_param("s", $username);
@@ -14,9 +14,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
-        $user = $result->fetch_assoc(); // Fetch the user data
+        $user = $result->fetch_assoc(); 
 
-        // Verify the password
+     
         if (password_verify($password, $user['password'])) {
             $_SESSION['username'] = $username;
             header("Location: index.php");
