@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </div>
                     <div class="forgot">
                         <p>Forgot Password?</p>
-                        <p>Register</p>
+                        <p>Sign Up</p>
                     </div>
                     <?php if (isset($error)) { ?>
                         <p style="color: red;"><?= $error ?></p>
