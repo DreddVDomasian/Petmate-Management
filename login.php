@@ -1,23 +1,26 @@
 <?php
-include("dbconnect.php");
+    include("dbconnect.php");
+    session_start(); 
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
 
-    $sql = "SELECT * FROM users WHERE username = ? AND password = ?";
-    $stmt = $con->prepare($sql);
-    $stmt->bind_param("ss", $username, $password);
-    $stmt->execute();
-    $result = $stmt->get_result();
+        
+        $query = "SELECT * FROM users WHERE username = ? AND password = ?";
+        $stmt = $conn->prepare($query);
+        $stmt->bind_param("ss", $username, $password);
+        $stmt->execute();
+        $result = $stmt->get_result();
 
-    if ($result->num_rows > 0) {
-        header("Location: index.html");
-        exit();
-    } else {
-        $error = "Invalid username or password.";
+        if ($result->num_rows === 1) {
+            $_SESSION['username'] = $username; 
+            header("Location: dashboard.php");
+            exit();
+        } else {
+            echo "Invalid username or password";
+        }
     }
-}
 ?>
 
 <!DOCTYPE html>
