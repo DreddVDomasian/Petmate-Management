@@ -68,17 +68,20 @@ i .passpic{
 i img{
     width: 40px;
 }
-.forgot{
+.forgot a{
     font-size: 20px;
     color: white;
     justify-content: space-around;
     display: flex;
     flex-direction: row;
-    text-decoration: underline 1px;
     cursor: pointer;
     font-family: "Inter", serif;
 }
-
+.signup{
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
 .login{
     display: flex;
     justify-content: center;

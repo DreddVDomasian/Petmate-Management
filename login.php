@@ -6,24 +6,29 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $sql = "SELECT * FROM users WHERE username = ? AND password = ?";
+    // Prepare the SQL statement to prevent SQL injection
+    $sql = "SELECT * FROM users WHERE username = ?";
     $stmt = $con->prepare($sql);
-    $stmt->bind_param("ss", $username, $password);
+    $stmt->bind_param("s", $username);
     $stmt->execute();
     $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
+        $user = $result->fetch_assoc(); // Fetch the user data
 
-        $_SESSION['username'] = $username;
-
-        header("Location: index.php");
-        exit();
+        // Verify the password
+        if (password_verify($password, $user['password'])) {
+            $_SESSION['username'] = $username;
+            header("Location: index.php");
+            exit();
+        } else {
+            $error = "Invalid username or password.";
+        }
     } else {
         $error = "Invalid username or password.";
     }
 }
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -60,8 +65,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <input type="password" name="password" id="password" placeholder="Enter Password" required>
                     </div>
                     <div class="forgot">
-                        <p>Forgot Password?</p>
-                        <p>Sign Up</p>
+                        <a>Forgot Password?</a>
+                        <a class="signup" href="register.php">Sign Up</a>
                     </div>
                     <?php if (isset($error)) { ?>
                         <p style="color: red;"><?= $error ?></p>
