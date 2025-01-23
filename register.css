@@ -19,7 +19,13 @@ body{
     flex-direction: column;
 }
 .pic{
+    width: 850px;
     margin-top: 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
 }
 .logo{
     width: 277px;
@@ -37,9 +43,7 @@ label{
     margin-bottom: 30px;
     font-family: "Inter", serif;
 }
-.passlabel{
-    margin-top: 50px;
-}
+
 input{
     width: 602px;
     height: 92px;
@@ -48,7 +52,7 @@ input{
     padding: 10px 10px 10px 100px;
     box-shadow: inset -1px 3px 4.5px 0 rgba(0, 0, 0, 0.479);
 }
-input[type="text"], input[type="password"]{
+input[type="text"], input[type="password"], input[type="Email"]{
     font-weight: 200;
     font-size: 30px; 
     font-family: "Inter", serif;
@@ -56,38 +60,30 @@ input[type="text"], input[type="password"]{
 i .userpic{
     display: flex;
     position: absolute;
-    top: 34%;
+    top: 34.5%;
     left: 33.4%;
 }
 i .passpic{
     display: flex;
     position: absolute;
-    top: 55%;
+    top: 65%;
+    left: 33.4%;
+}
+i .emailpic{
+    display: flex;
+    position: absolute;
+    top: 50.5%;
     left: 33.4%;
 }
 i img{
     width: 40px;
 }
-.forgot{
-    font-size: 20px;
-    color: white;
-    justify-content: space-around;
-    display: flex;
-    flex-direction: row;
-    cursor: pointer;
-    font-family: "Inter", serif;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-.signup{
-    font-size: 20px;
-    text-decoration: none;
-    color: white;
-}
+
 .login{
     display: flex;
     justify-content: center;
     font-family: "Inter", serif;
+    margin-top: 30px;
 }
 .login button{
     width: 277px;

@@ -37,13 +37,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="login.css"> 
+    <link rel="stylesheet" href="register.css"> 
     <title>Register</title>
 </head>
 <body>
     <div class="container">
         <div class="pic">
-            <img class="logo" src="LOGO.png" alt="logo">
+            <div><img onclick="window.location='login.php'" class="back" src="back.png" alt="back"></div>
+            <div><img class="logo" src="LOGO.png" alt="logo"></div>
+            <div></div>
         </div>
 
         <div class="details">
@@ -60,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <label for="email">Email</label>
                 </div>
                 <div class="input-container">
-                    <i><img class="userpic" src="email.png" alt=""></i>
+                    <i><img class="emailpic" src="email.png" alt=""></i>
                     <input type="email" name="email" id="email" placeholder="Enter Email" required>
                 </div>
 

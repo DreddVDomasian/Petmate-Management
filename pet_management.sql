@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 15, 2025 at 02:59 PM
+-- Generation Time: Jan 23, 2025 at 02:07 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -36,12 +36,26 @@ CREATE TABLE `petlists` (
   `phoneNumber` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `petlists`
+-- Table structure for table `users`
 --
 
-INSERT INTO `petlists` (`id`, `ownerName`, `petName`, `species`, `breed`, `phoneNumber`) VALUES
-(17, 'asd', 'asdas', 'dasdas', 'dasdas', '09272483891');
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `password` varchar(250) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
+(2, 'tite', 'Domasiandredd@gmail.com', '$2y$10$2c3e4ccqAQwOo.feHZNIw.WelbxLbVXCWt9SmHp2DEi2m8pJDEQsO'),
+(3, 'halal', 'katherinenato@hdas.cpm', '$2y$10$be4bD/ikdolb8T7PqsIlXeAB5Ealxcv/QWDYD7qhs4Aebxa5lliTS');
 
 --
 -- Indexes for dumped tables
@@ -54,6 +68,12 @@ ALTER TABLE `petlists`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -61,7 +81,13 @@ ALTER TABLE `petlists`
 -- AUTO_INCREMENT for table `petlists`
 --
 ALTER TABLE `petlists`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
